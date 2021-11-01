@@ -1,0 +1,41 @@
+{
+  "name": "Video Chat",
+  "private": false,
+  "displayName": "VideoChat",
+  "version": "1.5.116",
+  "packageType": "portable",
+  "main": "generated/main.js",
+  "description": "Flash OS images to SD cards and USB drives, safely and easily.",
+  "productDescription": "Etcher is a powerful OS image flasher built with web technologies to ensure flashing an SDCard or USB drive is a pleasant and safe experience. It protects you from accidentally writing to your hard-drives, ensures every byte of data was written correctly and much more.",
+  "homepage": "https://voice-chat-pc.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:balena-io/etcher.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{ts,tsx}": [
+      "npm run lint-ts"
+    ],
+    "./**/*.css": [
+      "npm run lint-css"
+    ]
+  },
+  "author": "Balena Inc. <hello@etcher.io>",
+  "license": "Apache-2.0",
+  "platformSpecificDependencies": [
+  ],
+  "dependencies": {},
+  "analytics": {
+    "sentry": {
+      "token": "https://6c37192da42f428fb1f352742f9fd0fb@o95242.ingest.sentry.io/5621395"
+    },
+    "mixpanel": {
+      "token": "balena-etcher"
+    }
+  }
+}
